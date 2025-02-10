@@ -1,0 +1,6 @@
+[submodule "themes/hugo-ttrpg"]
+	path = themes/hugo-ttrpg
+	url = git@github.com:spslater/hugo-ttrpg.git
+[submodule "static/orc-license"]
+	path = static/orclicense
+	url = git@github.com:spslater/orc-license.git

@@ -1,0 +1,54 @@
+baseURL = 'https://questing.party/'
+languageCode = 'en-us'
+title = 'Questing Party'
+theme = 'hugo-ttrpg'
+
+lastmod = true
+copyright = '© 2025 Questing Party'
+enableEmoji = true
+enableGitInfo = true
+
+[permalinks]
+  [permalinks.page]
+    docs = '/docs/:sections[last]/:title/'
+    logs = '/logs/:sections[last]/:title/'
+
+[markup]
+  defaultMarkdownHandler = 'goldmark'
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      strikethrough = false
+      table = true
+      taskList = true
+      [markup.goldmark.extensions.extras]
+        [markup.goldmark.extensions.extras.delete]
+          enable = true
+        [markup.goldmark.extensions.extras.insert]
+          enable = true
+        [markup.goldmark.extensions.extras.mark]
+          enable = true
+        [markup.goldmark.extensions.extras.subscript]
+          enable = true
+        [markup.goldmark.extensions.extras.superscript]
+          enable = true
+
+  [markup.highlight]
+    style = 'base16-snazzy'
+    lineNos = true
+
+[frontmatter]
+  date = ["publish", ":default"]
+  lastmod = ["lastmod", ":fileModTime", ":default"]
+
+[params]
+  description = "TTRPG Material"
+  lastmod = true
+  BookTheme = 'auto'
+  BookSection = "*"
+  BookRepo = "https://github.com/spslater/questing-party"
+  BookCommitPath = "commit"
+  BookDateFormat = "2 Jan 2006"
+  BookSearch = true
